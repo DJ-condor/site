@@ -1,0 +1,384 @@
+/* Importation de la police Ubuntu */
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #111;
+  color: #FFD700;
+  line-height: 1.6;
+}
+
+/* Conteneur principal */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1em;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  /* background-color: #000; */
+  background-image: url('2_images/Platines_fond_NB.jpg');
+  background-size: cover;
+  background-position: center left;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #FFD700;
+  position: relative;
+}
+
+/* Titres */
+h2 {
+  font-size: 2em;
+  margin-top: 1em;
+}
+
+/* Paragraphes */
+p {
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+.p_centre {
+  text-align: center;
+}
+
+.h2_centre {
+  text-align: center;
+}
+
+.h3_centre {
+  text-align: center;
+  letter-spacing: 0.3em;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.logo span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* ----------------------------------- */
+/* M E N U  DE  N A V I G A T I O N */
+/* ----------------------------------- */
+.nav-links {
+  display: flex;
+  gap: 1em;
+}
+
+.nav-links a {
+  color: #FFD700;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 0.5em 0.8em;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #FFD700;
+  color: #111;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Menu burger */
+/* --> Caché en temps normal */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #FFD700;
+  transition: all 0.3s ease;
+}
+
+/* --> Montré su les petits écrans */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 10;
+  }
+
+  .nav-links.nav-active {
+    max-height: none;
+  }
+
+  .nav-links a {
+    padding: 1em;
+    border-top: 1px solid #333;
+  }
+}
+
+/* Animation menu burger */
+.burger.toggle .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.toggle .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.toggle .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+a{
+  color:rgb(253, 246, 142);
+}
+
+/* ----------------------------------- */
+/* --------  T A B L E A U X --------- */
+/* ----------------------------------- */
+
+td {
+  border: 0.15em solid rgb(218, 183, 30);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.85em;
+  color: rgb(247, 240, 149);
+  padding: 0.3em;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  vertical-align: middle;
+}
+
+th {
+  border: 0.15em solid rgb(218, 183, 30);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 0.85em;
+  color: rgb(247, 240, 149);
+  padding: 0.3em;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgb(3, 34, 94);
+}
+
+table {
+  border-collapse: collapse;
+  caption-side: top;
+  margin: auto;
+  width: auto;
+  background-color: None;
+}
+
+caption {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5em;
+  color: rgb(228, 186, 2);
+}
+
+/* ------------------------------------------ */
+/* --------  F O R M U L A I R E S  --------- */
+/* ------------------------------------------ */
+
+textarea {
+  margin: auto;
+  width: auto;
+  height: 6em;
+  border: 0.1em #FFD700 solid;
+  border-radius: 0.3em;
+}
+
+input {
+  padding: auto;
+  border: 0.1em #FFD700 solid;
+  border-radius: 0.3em;
+}
+
+input[type="submit"] {
+  display: block;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(1, 4, 46);
+  font-size: 1.5em;
+  text-shadow: 0.05em 0.05em 0.05em rgb(253, 246, 142);
+  background-color: rgb(190, 184, 248);;
+  text-decoration: none;
+  text-align: center;
+  word-spacing: 1.5em;
+  height: 2em;
+  padding: auto;
+  margin: auto;
+}
+input[type="submit"]:hover {
+  color: rgb(253, 246, 142);
+  text-decoration: none;
+}
+
+input[type="submit"]:active {
+  color: rgb(7, 0, 36);
+  text-decoration: none;
+}
+
+input[type="submit"]:focus {
+  text-decoration: none;
+  color: rgb(207, 194, 4);
+}
+
+input[type="submit"]:visited {
+  /*color: rgb(163, 125, 1);*/
+  color: None;
+  text-decoration: none;
+}
+
+legend {
+
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  text-shadow: 0.05em 0.05em 0.05em rgb(253, 246, 142);
+  text-decoration: none;
+  color: rgb(248, 250, 116);
+  background-color: #16130052;
+  border: 0.1em #FFD700 solid;
+}
+
+fieldset {
+  width: auto;
+  /* margin-right: 20%; */
+  font-family: "Ubuntu", sans-serif;
+  /* font-weight: 400; */
+  font-size: 1em;
+  font-style: normal;
+  color: rgb(248, 250, 116);
+  background-color:#16130052;
+  border: 0.1em #FFD700 solid;
+  border-top: 0.2em #FFD700 solid;
+  padding: auto;
+  margin: auto;
+  /* padding-left: 2em;
+  padding-right: 2em; */
+  line-height: 1.4em;
+  /* margin-right: 1em;
+  margin-left: 1em; */
+  text-align: left;
+  /* box-shadow: 6px 6px 0px rgba(0, 0, 0); */
+  /* border-left: 0.1em rgb(173,7,118) dashed; */
+  /* border-right: 0.1em rgb(173,7,118) dashed; */
+  /* border-radius: 10px 30px 0px 90px; */
+  /* possibilité de faire la forme qu'on veut sur https://9elements.github.io/fancy-border-radius/ */
+  /* padding-left: 5em; */
+}
+
+
+:required {
+  background-color:#a6f2a3;
+}
+/* :invalid {
+  background-color:#F2A3BB;
+  color:rgb(245, 10, 10)
+} */
+:focus {
+  background-color: rgb(248, 250, 116);
+  /* border: 0.3em rgb(156, 149, 40) solid; */
+}
+
+
+/* ----------------------------------- */
+/* GRILLE VIDEO */
+/* ----------------------------------- */
+
+.grille_video {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 2fr 4fr 2fr 1fr 1fr;
+  gap: auto;
+  background-color: rgba(41, 37, 1, 0.315);
+  border: 0.4em #FFD700 solid;
+  padding: auto;
+  margin: 0.5em;
+  border-radius: 2em;
+  height: auto;
+}
+.photo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.box {
+  color: rgb(15, 15, 14);
+  background-color: rgba(211, 223, 43, 0.144);
+  border: 0.08em #FFD700 solid;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+
+}
+
+
+.un {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.deux {
+  grid-column: 1 / 3;
+  grid-row: 2 /4;
+}
+
+.element {
+  margin: auto;
+}
